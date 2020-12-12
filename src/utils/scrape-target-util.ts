@@ -65,7 +65,7 @@ export const scrapeTarget = async (config: { [key: string]: string }) => {
     }
 
     await page.goto(
-      'https://www.target.com/p/playstation-5-digital-edition-console/-/A-81114596'
+      'https://www.target.com/p/playstation-5-console/-/A-81114595'
     )
     // await page.goto(
     //   'https://www.target.com/p/dualsense-wireless-controller-for-playstation-5/-/A-81114477'
@@ -76,7 +76,7 @@ export const scrapeTarget = async (config: { [key: string]: string }) => {
     while (true) {
       try {
         await page.waitForSelector('button[data-test="shipItButton"]', {
-          timeout: 10000
+          timeout: 4000
         })
         break
       } catch (error) {
